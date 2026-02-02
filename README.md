@@ -252,41 +252,6 @@ export GPU_ARCH=gfx942   # For MI300 series
 ./thread_tracing.sh <M> <N> <K>
 ```
 
-The script generates:
-- **ATT traces** (`.att`) - Detailed thread execution traces
-- **Results database** (`.db`) - SQLite database with metrics
-- **JSON metadata** - Kernel info, occupancy, wavefront states
-- **CSV statistics** - Performance counters
-
-### Analyzing Traces
-
-#### View Statistics
-```bash
-# CSV performance statistics
-cat naive_gemm_trace/*.csv
-cat optimized_gemm_trace/*.csv
-
-# Compare execution patterns
-diff -r naive_gemm_trace optimized_gemm_trace
-```
-
-#### Omniperf Analysis (if available)
-```bash
-omniperf analyze -p naive_gemm_trace
-omniperf analyze -p optimized_gemm_trace
-```
-
-#### Extract Specific Data
-```bash
-# Find ATT files for wavefront analysis
-find optimized_gemm_trace -name "*.att"
-
-# View kernel metadata
-cat optimized_gemm_trace/*/code.json | jq
-
-# Check occupancy
-cat optimized_gemm_trace/*/occupancy.json | jq
-```
 
 ---
 
