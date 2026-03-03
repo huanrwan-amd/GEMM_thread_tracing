@@ -261,7 +261,6 @@ export GPU_ARCH=gfx942   # For MI300 series
 - [HIP Programming Guide](https://rocm.docs.amd.com/projects/HIP/en/latest/)
 - [AMD MFMA Instructions](https://rocm.docs.amd.com/en/latest/understand/gpu_arch/mi300.html)
 - [rocprof Profiler](https://rocm.docs.amd.com/projects/rocprofiler/en/latest/)
-- [Omniperf Analysis Tool](https://rocm.docs.amd.com/projects/omniperf/en/latest/)
 
 ---
 
