@@ -33,7 +33,6 @@ Both implementations compute: **C = A × B** where:
 |------|-------------|
 | `naive_gemm.cpp` | Unoptimized FP8 GEMM implementation. Each thread computes one output element using simple loops. No hardware acceleration or memory optimizations. |
 | `optimized_gemm.cpp` | Highly optimized FP8 GEMM using MFMA instructions, shared memory tiling, and dual-wave execution. Fixed WIDTH=1, HEIGHT=4 configuration. |
-| `kernel.cpp` | Original reference implementation with template-based adaptive kernel selection. Contains multiple kernel variants and verification code. |
 
 ### Build and Profiling Scripts
 
